@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<!-- Важная мета-информация для корректного отображения на мобильных устройствах -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты</title>
+<!-- Подключение фавиконки -->
+<link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Логотип</a>
+        <rav>
+            <ul>
+            <li><a href="index.html">Главная страница</a></li>
+            <li></li><a href="about.html">О нас</a></li>
+            <li></li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </rav>
+    </header>
+
+    <main>
+        <h1>Наши контакты</h1>
+        <section id="services">
+            <p>Наши телефоны</p>
+            <a href="#contacts">Связаться с нами</a>
+        </section>
+
+        <section id="contacts">
+            <h2>Наши соц.сети</h2>
+            <p>Наши контакты: ...</p>
+        </section>
+
+        <h1>Форма обратной связи</h1>
+        <form id="ContactForm">
+            <label for="username">Ваше имя:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="phone">Ваш номер телефона:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="email">Ваш email:</label>
+            <input type="text" name="email" id="email" required>
+
+            <label for="cource">Ваш курс:</label>
+            <select name="cource" id="cource">
+                <option value="No">Не выбрано</option>
+                <option value="1">Первый</option>
+                <option value="2">Второй</option>
+                <option value="3">Третий</option>
+                <option value="4">Четвертый</option>
+                <option value="other">Другой</option>
+            </select>
+
+            <label for="message">Ваше обращение:</label>
+            <textarea name="message" id="message" rows="6" required></textarea>
+
+            <button type="submit" id="submit" name="submit">Отправить</button>
+
+            <button type="reset" id="reset" name="reset">Очистить</button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

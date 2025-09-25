@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<!-- Важная мета-информация для корректного отображения на мобильных устройствах -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Контакты</title>
-<!-- Подключение фавиконки -->
-<link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="../static/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Название вашего сайта</title>
+    <meta name="description" content="Краткое описание главной страницы вашего сайта">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
     <header>
-        <a href="index.html">Логотип</a>
-        <rav>
-            <ul>
+        <!-- комментарий -->
+         <a href="index.html">Главная</a>
+         <ul>
             <li><a href="index.html">Главная страница</a></li>
-            <li></li><a href="about.html">О нас</a></li>
-            <li></li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </rav>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+         </ul>
     </header>
 
     <main>
-        <h1>Наши контакты</h1>
-        <section id="services">
-            <p>Наши телефоны</p>
-            <a href="#contacts">Связаться с нами</a>
+        <nav aria-label="Хлебные крошки">
+            <a href="index.html">Глваная</a> →
+            <span>О нас</span>
+        </nav>
+
+        <h1>Контакты</h1>
+        <section>
+            <h2>Наша электронная почта</h2>
+            <p>ivanov@mail.ru</p>
         </section>
 
-        <section id="contacts">
+        <section>
             <h2>Наши соц.сети</h2>
-            <p>Наши контакты: ...</p>
+            <p>Ссылка на соц.сети</p>
         </section>
 
-        <h1>Форма обратной связи</h1>
         <form id="ContactForm">
-            <label for="username">Ваше имя:</label>
-            <input type="text" id="username" name="username" required>
+            <h1>Форма обратной связи</h1>
 
-            <label for="phone">Ваш номер телефона:</label>
-            <input type="text" id="phone" name="phone" required>
+            <label for="username">Ваше имя:</label>
+            <input type="text" id="username" name="username" placeholder="Ivan_Ivanov">
+
+            <label for="password">Пароль:</label>
+            <input type="text" id="password" name="password">
 
             <label for="email">Ваш email:</label>
-            <input type="text" name="email" id="email" required>
+            <input type="text" id="email" name="email">
 
-            <label for="cource">Ваш курс:</label>
-            <select name="cource" id="cource">
-                <option value="No">Не выбрано</option>
-                <option value="1">Первый</option>
-                <option value="2">Второй</option>
-                <option value="3">Третий</option>
-                <option value="4">Четвертый</option>
+            <label for="cource">Выберите курс</label>
+            <select id="cource" name="cource">
+                <option value="none">--</option>
+                <option value="1">1 курс</option>
+                <option value="2">2 курс</option>
+                <option value="3">3 курс</option>
+                <option value="4">4 курс</option>
                 <option value="other">Другой</option>
             </select>
 
             <label for="message">Ваше обращение:</label>
-            <textarea name="message" id="message" rows="6" required></textarea>
+            <textarea id="message" name="message" rows="4"></textarea>
 
-            <button type="submit" id="submit" name="submit">Отправить</button>
-
-            <button type="reset" id="reset" name="reset">Очистить</button>
-
+            <label>Подтвердить</label>
+            <button type="reset">Очистить</button>
+            <button type="submit">Отправить</button>
         </form>
-
     </main>
 
     <footer>
         <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
         <p>Телефон: +7 (123) 456-78-90</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
-</html>

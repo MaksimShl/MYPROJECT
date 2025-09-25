@@ -1,11 +1,26 @@
 const form = document.getElementById('ContactForm'); // получаем поле ввода
 const emailInput = document.getElementById('email'); // получаем поле ввода email
 const phoneInput = document.getElementById('phone'); // получаем поле ввода phone
+const usernameInput = document.getElementById('username'); // получаем поле ввода username
 
 emailInput.addEventListener('input',validateEmail); // на событие ввода email будет вызываться функция validateEmail()
-phoneInput.addEventListener('input',validatePhone);
+phoneInput.addEventListener('input',validatePhone); // на событие ввода phone будет вызываться функция validatePhone()
+usernameInput.addEventListener('input',validateUsername); // на событие ввода username будет вызываться функция validateUsername()
 
-phoneInput.setAttribute('pattern', '^\\+7 \\(\\d{3}\\) \\d{3}-\\d{2}-\\d{2}$');
+function validateUsername() {
+    const usernameRegex = /[A-Яа-я]/;
+    if(usernameRegex.test(usernameInput.value))
+    {
+        removeError(usernameInput);
+        return true;
+    }
+    else
+    {
+        showError(usernameInput, "Username не соответствует формату. Пример: Иван");
+        return false;
+    }
+        
+}
 
 function validateEmail() { // функция проверки коректности email
 
@@ -23,10 +38,12 @@ function validateEmail() { // функция проверки коректнос
 
 }
 
+phoneInput.setAttribute('pattern', '^\\+7 \\(\\d{3}\\) \\d{3}-\\d{2}-\\d{2}$');
+
 function validatePhone() {
 
-    const digits = phoneInput.value.replace(/\D/g, '').slice(0, 11); // до 11 цифр
-    const d = digits.replace(/^8/, '7'); // нормализуем 8 → 7
+    const digits = phoneInput.value.replace(/\D/g, '').slice(0, 11); 
+    const d = digits.replace(/^8/, '7'); 
     
     const parts = [];
     if (d.length > 0) parts.push('+7');
